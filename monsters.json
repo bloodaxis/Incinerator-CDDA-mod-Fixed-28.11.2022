@@ -2,16 +2,15 @@
   {
     "id": "mon_dust_box",
     "type": "MONSTER",
-    "name": "incinerator",
+    "name": { "str": "incinerator" },
     "description": "A machine that can crush, incinerate, and generally annihilate just about anything. To pack it back up, simply bump into it.",
     "default_faction": "player",
     "species": [ "ROBOT" ],
     "diff": 0,
-    "size": "HUGE",
     "hp": 20,
     "speed": 100,
     "symbol": "&",
-    "color": "dkgray",
+    "color": "dark_gray",
     "aggression": 0,
     "morale": 0,
     "melee_skill": 0,
@@ -21,8 +20,12 @@
     "armor_cut": 7,
     "vision_day": 1,
     "vision_night": 1,
+	"special_attacks": [ [ "ABSORB_ITEMS", 0 ] ],
+	"absorb_move_cost_min": 0.0,
+	"absorb_move_cost_per_ml": 0.0,
+	"absorb_ml_per_hp": 9999999,
     "revert_to_itype": "bot_dust_box_mon",
-    "death_function": [ "BROKEN" ],
-    "flags": [ "ABSORBS", "IMMOBILE" ]
+    "death_function": { "corpse_type": "BROKEN" },
+    "flags": [ "IMMOBILE" ]
   }
 ]
